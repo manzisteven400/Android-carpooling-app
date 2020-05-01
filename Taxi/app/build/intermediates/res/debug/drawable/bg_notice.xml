@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <stroke
+        android:width="0.5dp"
+        android:color="#ededed" />
+
+    <solid android:color="#fcf8c7" />
+
+</shape><!-- From: file:/D:/backup01/Full_Stack_Web_dev/AndroidStudioProjects/Taxi/Taxi/app/src/main/res/drawable/bg_notice.xml -->

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <include layout="@layout/layout_only_header" />
+
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_avartar_size"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_taxi_dank" />
+	    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_avartar_size"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_header_trip" />
+	    
+	    <com.pt.taxi.widget.TextViewRaleway
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_your_end_trip"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/size_text_header"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold" />
+	</RelativeLayout>
+	
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/space_small"
+                android:paddingBottom="@dimen/space_small"
+                android:layout_marginBottom="@dimen/margin_horizontal_xlarge"
+                android:weightSum="2"
+                android:background="@color/color_book" >
+
+                <LinearLayout
+                    android:id="@+id/btn_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:id="@+id/ic_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/ic_user"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:id="@+id/lbl_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_trip_passenger"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="40 Points"
+                    android:textColor="@color/white"
+                    android:paddingRight="@dimen/space_small"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            
+            <com.pt.taxi.widget.TextViewRaleway
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/lbl_rating"
+	            android:textAllCaps="true"
+	            android:gravity="center"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_xlarge"
+	            android:layout_marginBottom="@dimen/margin_horizontal" />
+            
+           <RatingBar  
+		        android:id="@+id/ratingBar"  
+		        android:layout_width="wrap_content"  
+		        android:layout_height="wrap_content"
+		        android:progressBackgroundTint="@color/gray3"
+		        android:secondaryProgressTint="@color/gray3"
+		        android:layout_gravity="center_horizontal" />  
+		        
+            <TextView
+                android:id="@+id/btnSend"
+                android:layout_marginTop="@dimen/space_normal"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_paypal_yl"
+                android:paddingBottom="@dimen/padding_small"
+                android:gravity="center"
+                android:text="@string/lbl_send"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large" />
+            
+      </LinearLayout>
+</LinearLayout>

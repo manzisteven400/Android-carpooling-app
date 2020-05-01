@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_findcar" >
+
+        <com.pt.taxi.widget.TextViewPixeden
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/ic_back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_xlarge" />
+
+        <com.pt.taxi.widget.TextViewRaleway
+            android:id="@+id/lblTitle"
+            style="@style/Layout.WrapWidthHeight"
+            android:layout_centerInParent="true"
+            android:text="@string/lbl_request_passenger"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_header" />
+    </RelativeLayout>
+
+    <com.pt.taxi.widget.TextViewRaleway
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="@dimen/margin_horizontal"
+        android:gravity="center"
+        android:text="@string/lblreceiver_link"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold" />
+
+    <com.pt.taxi.widget.TextViewRaleway
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="@dimen/margin_horizontal"
+        android:gravity="center"
+        android:text="@string/lbl_request_by_passenger"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold" />
+
+    <ListView
+        android:padding="@dimen/padding_horizontal"
+        android:id="@+id/lvRequestPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:layout_centerVertical="true"
+        android:gravity="center" >
+    </ListView>
+
+</RelativeLayout>

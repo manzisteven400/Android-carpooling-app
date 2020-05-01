@@ -1,0 +1,398 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- <include layout="@layout/layout_header" /> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_findcar" >
+
+        <com.pt.taxi.widget.TextViewPixeden
+            android:id="@+id/btnMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/pe_7s_menu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_large" />
+
+        <com.pt.taxi.widget.TextViewRaleway
+            android:id="@+id/lblTitle"
+            style="@style/Layout.WrapWidthHeight"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_header" />
+
+        <com.pt.taxi.widget.TextViewPixeden
+            android:id="@+id/btnIcGPS"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/ic_gps"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_xlarge" />
+
+        <!-- <ImageView -->
+        <!-- android:id="@+id/btnGPS" -->
+        <!-- android:layout_width="50dp" -->
+        <!-- android:layout_height="50dp" -->
+        <!-- android:padding="@dimen/padding_vertical" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:contentDescription="@string/lbl_description" -->
+        <!-- android:src="@drawable/ic_gps" /> -->
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_findcar"
+                android:orientation="horizontal" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/lblAvailableVehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lbl_find_car"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_book"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:text="@string/btn_next"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_book"
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_Car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_findcar"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                 	android:paddingTop="5dp"
+                    android:src="@drawable/car_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ed_from"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginLeft="@dimen/margin_vertical"
+                android:layout_marginRight="@dimen/margin_vertical"
+                android:layout_marginTop="@dimen/margin_horizontal_large"
+                android:background="@drawable/bg_input"
+                android:orientation="horizontal" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_vertical"
+                    android:text="@string/lbl_from"
+                    android:textColor="@color/from" />
+
+                <EditText
+                    android:id="@+id/txtFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#FFFFFFFF"
+                    android:hint=""
+                    android:paddingLeft="@dimen/padding_vertical"
+                    android:textColor="@color/from"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.pt.taxi.widget.TextViewPixeden
+                    android:id="@+id/btn_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_vertical_large"
+                    android:gravity="center"
+                    android:text="@string/pe_7s_map_marker"
+                    android:textColor="@color/from" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ed_to"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginLeft="@dimen/margin_vertical"
+                android:layout_marginRight="@dimen/margin_vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/bg_input"
+                android:orientation="horizontal" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_vertical"
+                    android:text="@string/lbl_to"
+                    android:textColor="@color/to" />
+
+                <EditText
+                    android:id="@+id/txtTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_vertical"
+                    android:layout_weight="1"
+                    android:background="#FFFFFFFF"
+                    android:hint=""
+                    android:paddingLeft="@dimen/padding_vertical_large"
+                    android:textColor="@color/to"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.pt.taxi.widget.TextViewPixeden
+                    android:id="@+id/btn_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_vertical_large"
+                    android:gravity="center"
+                    android:text="@string/pe_7s_map_marker"
+                    android:textColor="@color/to" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ed_PickUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginLeft="@dimen/margin_vertical"
+                android:layout_marginRight="@dimen/margin_vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/bg_input"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_vertical"
+                    android:text="Pick Up:"
+                    android:textColor="@color/to" />
+
+                <EditText
+                    android:id="@+id/txtPickUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_vertical"
+                    android:layout_weight="1"
+                    android:background="#FFFFFFFF"
+                    android:hint=""
+                    android:paddingLeft="@dimen/padding_vertical_large"
+                    android:textColor="@color/to"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.pt.taxi.widget.TextViewPixeden
+                    android:id="@+id/btn_PickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_vertical_large"
+                    android:gravity="center"
+                    android:text="@string/pe_7s_map_marker"
+                    android:textColor="@color/to" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_vertical_xlarge"
+            android:layout_marginRight="@dimen/margin_vertical_xlarge"
+            android:layout_marginTop="@dimen/space_xxlarge"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/btnlink1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:background="@color/color_book"
+                android:visibility="gone" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_horizontal_xlarge"
+                    android:gravity="center"
+                    android:text="@string/lbl_link1"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textView1"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnlink2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginTop="@dimen/margin_horizontal"
+                android:background="@color/color_book"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textView2"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_alignTop="@+id/imageView2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_horizontal_xlarge"
+                    android:gravity="center"
+                    android:text="@string/lbl_link2"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnlink3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginTop="@dimen/margin_horizontal"
+                android:background="@color/color_book"
+                android:visibility="gone" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_horizontal_xlarge"
+                    android:gravity="center"
+                    android:text="@string/lbl_link3"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textView3"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_alignTop="@+id/imageView4"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView4"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="@dimen/width_icon"
+                    android:layout_height="@dimen/height_icon"
+                    android:layout_alignTop="@+id/imageView5"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView5"
+                    android:contentDescription="@string/lbl_description"
+                    android:paddingRight="@dimen/padding_vertical"
+                    android:src="@drawable/ic_link" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

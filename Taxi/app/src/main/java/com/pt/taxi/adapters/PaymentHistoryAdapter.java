@@ -1,0 +1,165 @@
+package com.pt.taxi.adapters;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.pt.taxi.R;
+
+public class PaymentHistoryAdapter extends BaseAdapter {
+
+	// public ArrayList<NewsObj> arrNews;
+	private LayoutInflater mInflate;
+	private ArrayList<View> arrViews;
+	Activity mAct;
+
+	// AQuery aq;
+
+	public PaymentHistoryAdapter(Activity activity) {
+		// this.arrNews = listNews;
+		this.mAct = activity;
+		arrViews = new ArrayList<View>();
+		this.mInflate = (LayoutInflater) activity
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	}
+
+	// public void setListNews(ArrayList<NewsObj> arrNews) {
+	// this.arrNews = arrNews;
+	// }
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		// return arrNews.size();
+		return 20;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, final ViewGroup parent) {
+		// TODO Auto-generated method stub
+		final HolderView holder;
+		if (convertView == null) {
+			holder = new HolderView();
+			convertView = mInflate.inflate(
+					R.layout.layout_item_payment_history, null);
+
+			holder.lblType = (TextView) convertView.findViewById(R.id.lblType);
+			holder.lblPoint = (TextView) convertView
+					.findViewById(R.id.lblDestination);
+			convertView.setTag(holder);
+
+			String[] data = { "Payout", "Payment", "Transfer" };
+			int min = 1;
+			int max = 3;
+
+			Random r = new Random();
+			int i1 = r.nextInt(max - min + 1) + min;
+			switch (i1) {
+			case 1:
+				holder.lblType.setText("Payout");
+				holder.lblPoint.setText("(-60)");
+				holder.lblPoint.setTextColor(mAct.getResources().getColor(
+						R.color.red));
+				break;
+			case 2:
+				holder.lblType.setText("Payment");
+				holder.lblPoint.setText("50");
+				break;
+			case 3:
+				holder.lblType.setText("Transfer");
+				holder.lblPoint.setText("100");
+				break;
+			}
+			// for (int i = 0; i < data.length; i++) {
+			// Random random=new Random();
+			// int x=random.nextInt(data.length);
+			//
+			// holder.lblType.setText(""+x);
+			//
+			// }
+
+		} else {
+			holder = (HolderView) convertView.getTag();
+		}
+
+		return convertView;
+		// if (convertView == null) {
+		// holder = new HolderView();
+		// convertView = mInflate.inflate(R.layout.layout_item_new, null);
+		// holder.imgNews = (ImageView) convertView.findViewById(R.id.imgNews);
+		// holder.lblTitleNews = (TextView) convertView
+		// .findViewById(R.id.lblTitleNew);
+		// holder.lblDesc = (TextView) convertView
+		// .findViewById(R.id.lblDescNews);
+		// holder.lblDesc.setSelected(true);
+		// holder.lblUrl = (TextView) convertView.findViewById(R.id.lblUrl);
+		// holder.lblReadMore = (TextView) convertView
+		// .findViewById(R.id.lblReadMore);
+		//
+		// convertView.setTag(holder);
+		// } else {
+		// holder = (HolderView) convertView.getTag();
+		// }
+		// final NewsObj item = arrNews.get(position);
+		// if (item != null) {
+		// aq = new AQuery(mAct);
+		// boolean memCache = false;
+		// boolean fileCache = true;
+		// aq.id(holder.imgNews).image(item.getImage(), memCache, fileCache);
+		// holder.lblTitleNews.setText(item.getTitle());
+		// holder.lblDesc.setText(item.getDesc());
+		// holder.lblUrl.setText(item.getUrl());
+		// holder.lblReadMore.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// // TODO Auto-generated method stub
+		// String url = holder.lblUrl.getText().toString();
+		// String title = holder.lblTitleNews.getText().toString();
+		// Intent i = new Intent(parent.getContext(),
+		// ActivityBrowser.class);
+		// i.putExtra("url", url);
+		// i.putExtra("title", title);
+		// parent.getContext().startActivity(i);
+		// mAct.overridePendingTransition(R.anim.slide_in_left,
+		// R.anim.slide_out_left);
+		// }
+		// });
+		// }
+		// return convertView;
+	}
+
+	public class HolderView {
+		TextView lblType, lblPoint;
+		ImageView imgNews;
+		TextView lblTitleNews, lblDesc, lblUrl, lblReadMore;
+
+	}
+}

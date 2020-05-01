@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/background_findcar" >
+
+    <com.pt.taxi.widget.TextViewPixeden
+        android:id="@+id/btnMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/pe_7s_menu"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_large" />
+
+    <com.pt.taxi.widget.TextViewRaleway
+        android:id="@+id/lblTitle"
+        style="@style/Layout.WrapWidthHeight"
+        android:layout_centerInParent="true"
+        android:text="@string/lbl_share"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_header" />
+
+</RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_horizontal_large"
+        android:layout_marginRight="@dimen/margin_horizontal_large"
+        android:layout_marginTop="@dimen/margin_vertical_xxlarge"
+        android:contentDescription="@string/lbl_description"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/btnShareFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:layout_marginLeft="@dimen/margin_horizontal_xxlarge"
+        android:layout_marginRight="@dimen/margin_horizontal_xxlarge"
+        android:layout_marginTop="@dimen/margin_horizontal_xlarge"
+        android:background="@drawable/bg_facebook"
+        android:orientation="horizontal" >
+
+        <com.pt.taxi.widget.TextViewFontAwesome
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_ic"
+            android:text="@string/ic_facebook"
+            android:textColor="@color/white" />
+
+        <com.pt.taxi.widget.TextViewRaleway
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/lbl_facebook"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnShareGmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:layout_marginLeft="@dimen/margin_horizontal_xxlarge"
+        android:layout_marginRight="@dimen/margin_horizontal_xxlarge"
+        android:layout_marginTop="@dimen/margin_vertical_large"
+        android:layout_marginBottom="@dimen/margin_vertical_large"
+        android:background="@drawable/bg_google"
+        android:orientation="horizontal" >
+
+        <com.pt.taxi.widget.TextViewFontAwesome
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_ic"
+            android:text="@string/ic_google"
+            android:textColor="@color/white" />
+
+        <com.pt.taxi.widget.TextViewRaleway
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/lbl_google"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+    </RelativeLayout>
+    
+    <com.pt.taxi.widget.TextViewRaleway
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="@string/lbl_share_speak"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+<!--     <RelativeLayout -->
+<!--         android:id="@+id/btnShareTwitter" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="@dimen/height_button" -->
+<!--         android:layout_marginLeft="@dimen/margin_horizontal_xxlarge" -->
+<!--         android:layout_marginRight="@dimen/margin_horizontal_xxlarge" -->
+<!--         android:layout_marginTop="@dimen/margin_vertical_large" -->
+<!--         android:background="@drawable/bg_twitter" -->
+<!--         android:orientation="horizontal" > -->
+
+<!--         <com.pt.taxi.widget.TextViewFontAwesome -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_alignParentLeft="true" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:layout_marginLeft="@dimen/margin_left_ic" -->
+<!--             android:text="@string/ic_twitter" -->
+<!--             android:textColor="@color/white" /> -->
+
+<!--         <com.pt.taxi.widget.TextViewRaleway -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_centerHorizontal="true" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:gravity="center_vertical|center_horizontal" -->
+<!--             android:text="@string/lbl_twitter" -->
+<!--             android:textColor="@color/white" -->
+<!--             android:textSize="@dimen/text_size_large" /> -->
+<!--     </RelativeLayout> -->
+
+</LinearLayout>

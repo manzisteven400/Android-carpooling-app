@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/background_findcar" >
+
+    <com.pt.taxi.widget.TextViewRaleway
+        android:id="@+id/lblTitle"
+        style="@style/Layout.WrapWidthHeight"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_header" />
+
+</RelativeLayout><!-- From: file:/D:/backup01/Full_Stack_Web_dev/AndroidStudioProjects/Taxi/Taxi/app/src/main/res/layout/layout_only_header.xml -->

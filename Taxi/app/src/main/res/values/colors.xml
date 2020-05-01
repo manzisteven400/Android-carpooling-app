@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="background_main">#4b6a00</color>
+    <color name="background_rank_column">#172f35</color>
+    <color name="background_top_4">#689401</color>
+    <color name="actionbar_text">#ffffff</color>
+    <color name="tab_textColor">#ffffff</color>
+    <color name="textColor_curentRound">#fcc701</color>
+    <color name="tab_textColor_selected">#878787</color>
+    <color name="tab_textColor_unselected">#000000</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray2">#b8b8b8</color>
+    <color name="black">#000000</color>
+    <color name="red">#b81313</color>
+    <color name="white">#ffffff</color>
+    <color name="gray3">#e5e5e5</color>
+    <color name="yellow">#f3d411</color>
+    <color name="list_item_odd">#80878787</color>
+    <color name="blue">#12478a</color>
+    <color name="green">#00ff00</color>
+    <color name="yellow_dark">#fcc701</color>
+    <color name="indicator_color">#FF666666</color>
+    <color name="underline_color">#1A000000</color>
+    <color name="divider_color">#1A000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_trip">#176e9a</color>
+    <color name="background_twitter">#00A7E7</color>
+    <color name="background_title_register">#2aa8f7</color>
+    <color name="color_trip">#ccc9c9</color>
+
+    <!-- Menu color -->
+    <color name="bluer_text">#097894</color>
+    <color name="menu_header_background">#393939</color>
+    <color name="menu_content_background">#393939</color>
+    <color name="to">#FF2E2E</color>
+    <color name="from">#4E9AAD</color>
+    <color name="background_findcar">#393939</color>
+    <color name="background_total_history">#b4cde6</color>
+    <color name="color_book">#2884fc</color>
+    <color name="a">#FFFFFFFF</color>
+    <color name="background">#393939</color>
+    <color name="background_register">#3f3f3f</color>
+    <color name="background_link">#4A66A0</color>
+    <color name="background_paypal">#179BD7</color>
+
+</resources>

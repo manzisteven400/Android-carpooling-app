@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_findcar" >
+
+        <com.pt.taxi.widget.TextViewPixeden
+            android:id="@+id/btnMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/ic_back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_large" />
+
+        <com.pt.taxi.widget.TextViewRaleway
+            android:id="@+id/lblTitle"
+            style="@style/Layout.WrapWidthHeight"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_header" />
+    </RelativeLayout>
+
+    <com.pt.taxi.widget.VerticalScrollview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="9"
+                    android:src="@drawable/icon_nexe_travel" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_location"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="Manchester,UK"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="6"
+                            android:src="@drawable/ic_myposition" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_location"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="To"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ic_home"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.4"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:src="@drawable/ic_slider" />
+
+                <Button
+                    android:id="@+id/btn_Submit"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="8.6"
+                    android:background="@drawable/bg_submit_notconner"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Create email alert"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_road"
+                android:orientation="vertical" >
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/lbl_today"
+                    style="@style/Layout.WrapWidthHeight"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Today"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_header" />
+
+                <ListView
+                    android:id="@+id/lv_trip"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:divider="#FF0000" >
+                </ListView>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:id="@+id/lbl_tomorrow"
+                    style="@style/Layout.WrapWidthHeight"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Tomorrow"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_header" />
+
+                <ListView
+                    android:id="@+id/lv_trip_tomorrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:divider="#FF0000" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.pt.taxi.widget.VerticalScrollview>
+
+</LinearLayout><!-- From: file:/D:/backup01/Full_Stack_Web_dev/AndroidStudioProjects/Taxi/Taxi/app/src/main/res/layout/activity_findaride.xml -->

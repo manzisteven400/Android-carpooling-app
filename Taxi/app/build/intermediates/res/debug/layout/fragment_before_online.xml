@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_header" />
+
+    <com.pt.taxi.widget.TextViewRaleway
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/margin_vertical_xlarge"
+        android:layout_marginRight="@dimen/margin_vertical_xlarge"
+        android:layout_marginTop="@dimen/margin_vertical_large"
+        android:gravity="center"
+        android:text="@string/lbl_guide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_vertical_xlarge"
+        android:layout_marginRight="@dimen/margin_vertical_xlarge"
+        android:layout_marginTop="@dimen/margin_vertical_xxlarge"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/btn_one_seat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button"
+            android:background="@color/color_book" >
+
+            <com.pt.taxi.widget.TextViewRaleway
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/lbl_link1"
+                android:textColor="@color/black" 
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_horizontal_xlarge"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView1"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_two_seat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginTop="@dimen/margin_horizontal"
+            android:background="@color/color_book" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView2"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+
+            <com.pt.taxi.widget.TextViewRaleway
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/lbl_link2"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_horizontal_xlarge" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_three_seat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginTop="@dimen/margin_horizontal"
+            android:background="@color/color_book" >
+
+            <com.pt.taxi.widget.TextViewRaleway
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/lbl_link3"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_horizontal_xlarge" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView3"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_alignTop="@+id/imageView4"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView4"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/width_icon"
+                android:layout_height="@dimen/height_icon"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView5"
+                android:contentDescription="@string/lbl_description"
+                android:paddingRight="@dimen/padding_vertical"
+                android:src="@drawable/ic_link" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/backup01/Full_Stack_Web_dev/AndroidStudioProjects/Taxi/Taxi/app/src/main/res/layout/fragment_before_online.xml -->

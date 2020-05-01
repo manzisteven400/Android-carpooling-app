@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <com.pt.taxi.widget.TextViewRaleway
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/space_tiny"
+                android:paddingRight="@dimen/space_tiny"
+                android:paddingTop="@dimen/space_tiny"
+                android:text="@string/lbl_show_passenger"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:id="@+id/btn_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:id="@+id/ic_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/ic_user"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:id="@+id/lbl_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_passenger_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="Mack Jone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/ic_phone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_phone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/phone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/ic_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="@string/ic_star"
+                        android:textColor="@color/yellow_dark"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="@color/transparent"
+                        android:text="@string/ic_star"
+                        android:textColor="@color/yellow_dark"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="@color/transparent"
+                        android:text="@string/ic_star"
+                        android:textColor="@color/yellow_dark"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="@color/transparent"
+                        android:text="@string/ic_star"
+                        android:textColor="@color/yellow_dark"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="@color/transparent"
+                        android:text="@string/ic_star"
+                        android:textColor="@color/yellow_dark"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewPixeden
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/pe_7s_map_marker"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/start_a"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewPixeden
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/pe_7s_map_marker"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lbl_end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/start_b"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/space_small"
+                android:weightSum="4" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_tiny"
+                    android:weightSum="10" >
+
+                    <com.pt.taxi.widget.TextViewFontAwesome
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="@string/ic_length"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <com.pt.taxi.widget.TextViewRaleway
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="Distance between driver and you"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <com.pt.taxi.widget.TextViewRaleway
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:text="1000m"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_tiny" >
+
+                <ImageView
+                    android:id="@+id/img_car1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_avartar_size"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/padding_small"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnArrived"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_normal"
+                android:background="@drawable/ic_blue_button"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/lbl_arrived"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/btnCancelTrip"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_vertical_large"
+                android:layout_marginTop="@dimen/space_normal"
+                android:background="@drawable/ic_red_button"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/lbl_cancel_trip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

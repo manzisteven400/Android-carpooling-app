@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/backup01/Full_Stack_Web_dev/AndroidStudioProjects/Taxi/Taxi/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/11.0.4/res/values-en-rSG/values.xml -->
+    <eat-comment/>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Buy with Google"</string>
+</resources>
